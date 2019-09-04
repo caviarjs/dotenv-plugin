@@ -25,8 +25,20 @@ $ npm i @caviar/dotenv-plugin-plugin
 
 ## Usage
 
+config.js
+
 ```js
-const dotenv_plugin_plugin = require('@caviar/dotenv-plugin-plugin')
+const DotEnvPlugin = require('@caviar/dotenv-plugin-plugin')
+
+module.exports = {
+  caviar: {
+    plugins: [
+      new DotEnvPlugin()
+    ],
+    ...
+  },
+  ...
+}
 ```
 
 ## License
