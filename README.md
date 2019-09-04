@@ -15,7 +15,7 @@
 
 # @caviar/dotenv-plugin
 
-caviar plugin to support .env file
+caviar plugin to support `.env` file
 
 ## Install
 
@@ -24,6 +24,14 @@ $ npm i @caviar/dotenv-plugin
 ```
 
 ## Usage
+
+.env
+
+```sh
+SITE_HOST=https://google.com
+
+SITE_PORT=8888
+```
 
 config.js
 

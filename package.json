@@ -1,6 +1,6 @@
 {
   "name": "@caviar/dotenv-plugin",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "caviar plugin to support .env file",
   "main": "src/index.js",
   "scripts": {
