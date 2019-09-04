@@ -1,11 +1,11 @@
 {
   "name": "@caviar/dotenv-plugin",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "caviar plugin to support .env file",
   "main": "src/index.js",
   "scripts": {
-    "test": "NODE_DEBUG=@caviar/dotenv-plugin-plugin nyc ava --timeout=10s --verbose",
-    "test:dev": "NODE_DEBUG=@caviar/dotenv-plugin-plugin nyc ava --timeout=10s --verbose && npm run report:dev",
+    "test": "NODE_DEBUG=@caviar/dotenv-plugin nyc ava --timeout=10s --verbose",
+    "test:dev": "NODE_DEBUG=@caviar/dotenv-plugin nyc ava --timeout=10s --verbose && npm run report:dev",
     "lint": "eslint .",
     "fix": "eslint . --fix",
     "posttest": "npm run report",
@@ -21,7 +21,7 @@
     "url": "git://github.com/caviarjs/dotenv-plugin.git"
   },
   "keywords": [
-    "@caviar/dotenv-plugin-plugin",
+    "@caviar/dotenv-plugin",
     "caviar-plugin",
     "dotenv"
   ],

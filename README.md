@@ -4,23 +4,23 @@
 [![Windows Build Status](https://ci.appveyor.com/api/projects/status/github/caviarjs/dotenv-plugin?branch=master&svg=true)](https://ci.appveyor.com/project/caviarjs/dotenv-plugin)
 -->
 <!-- optional npm version
-[![NPM version](https://badge.fury.io/js/@caviar/dotenv-plugin-plugin.svg)](http://badge.fury.io/js/@caviar/dotenv-plugin-plugin)
+[![NPM version](https://badge.fury.io/js/@caviar/dotenv-plugin.svg)](http://badge.fury.io/js/@caviar/dotenv-plugin)
 -->
 <!-- optional npm downloads
-[![npm module downloads per month](http://img.shields.io/npm/dm/@caviar/dotenv-plugin-plugin.svg)](https://www.npmjs.org/package/@caviar/dotenv-plugin-plugin)
+[![npm module downloads per month](http://img.shields.io/npm/dm/@caviar/dotenv-plugin.svg)](https://www.npmjs.org/package/@caviar/dotenv-plugin)
 -->
 <!-- optional dependency status
 [![Dependency Status](https://david-dm.org/caviarjs/dotenv-plugin.svg)](https://david-dm.org/caviarjs/dotenv-plugin)
 -->
 
-# @caviar/dotenv-plugin-plugin
+# @caviar/dotenv-plugin
 
 caviar plugin to support .env file
 
 ## Install
 
 ```sh
-$ npm i @caviar/dotenv-plugin-plugin
+$ npm i @caviar/dotenv-plugin
 ```
 
 ## Usage
@@ -28,7 +28,7 @@ $ npm i @caviar/dotenv-plugin-plugin
 config.js
 
 ```js
-const DotEnvPlugin = require('@caviar/dotenv-plugin-plugin')
+const DotEnvPlugin = require('@caviar/dotenv-plugin')
 
 module.exports = {
   caviar: {
