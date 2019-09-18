@@ -8,7 +8,11 @@ const DOT_ENV_PLUGIN = 'DotEnvPlugin'
 const DOT_ENV = '.env'
 
 module.exports = class DotEnvPlugin {
-  constructor () {
+  sandbox () {
+    return true
+  }
+
+  _readEnv () {
     const filepath = resolve(process.env.CAVIAR_CWD, DOT_ENV)
 
     let content
@@ -23,16 +27,28 @@ module.exports = class DotEnvPlugin {
       throw error('ERR_READ_DOTENV', filepath, err.stack)
     }
 
-    this._env = parse(content.toString())
+    return parse(content.toString())
   }
 
   apply (getHooks) {
-    if (!this._env) {
+    if (process.env.CAVIAR_SANDBOX !== 'outer') {
       return
     }
+    // Only outside the sandbox
 
-    getHooks().beforeConfig.tap(DOT_ENV_PLUGIN, () => {
-      Object.assign(process.env, this._env)
-    })
+    getHooks().sandboxEnvironment.tapPromise(
+      DOT_ENV_PLUGIN,
+      async sandbox => {
+        const env = this._readEnv()
+
+        if (!env) {
+          return
+        }
+
+        for (const [key, value] of Object.entries(env)) {
+          sandbox.setEnv(key, value)
+        }
+      }
+    )
   }
 }

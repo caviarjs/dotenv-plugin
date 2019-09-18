@@ -15,12 +15,14 @@
 
 # @caviar/dotenv-plugin
 
-caviar plugin to support `.env` file
+caviar plugin to support `.env` file.
+
+This plugin is a **sandbox** plugin which only works when caviar sandbox is enabled.
 
 ## Install
 
 ```sh
-$ npm i @caviar/dotenv-plugin
+$ npm i @caviar/dotenv-plugin -D
 ```
 
 ## Usage
