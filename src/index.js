@@ -8,7 +8,7 @@ const DOT_ENV_PLUGIN = 'DotEnvPlugin'
 const DOT_ENV = '.env'
 
 module.exports = class DotEnvPlugin {
-  sandbox () {
+  get sandbox () {
     return true
   }
 
